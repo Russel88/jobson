@@ -142,9 +142,7 @@
         <module>jobson-swagger-ui</module>
         <module>jobson-docs</module>
 
-        <!-- Packaging -->
-        <module>jobson-deb</module>
-        <module>jobson-nix</module>
-        <module>jobson-docker</module>
+	<module>jobson-nix</module>
+
     </modules>
 </project>

@@ -163,7 +163,7 @@ export class StringArrayInputEditor extends Component<InputEditorProps, StringAr
 
     private onClickImportValuesFromFile(): void {
         Helpers
-            .promptUserForFile("text/plain")
+            .promptUserForFile("")
             .then(Helpers.readFileAsText)
             .then(text => text.trim())
             .then(StringArrayInputEditor.splitTextBlockIntoValues)

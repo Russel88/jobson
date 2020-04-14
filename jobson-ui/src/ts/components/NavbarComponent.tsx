@@ -21,6 +21,7 @@ import * as React from "react";
 import {NavLink} from "react-router-dom";
 import {JobsonAPI} from "../JobsonAPI";
 import {ReactElement} from "react";
+import {Constants} from "../Constants";
 
 export interface NavbarComponentProps {
     api: JobsonAPI,
@@ -111,21 +112,12 @@ export class NavbarComponent extends React.Component<NavbarComponentProps, Navba
                 <div className="ui container">
 
 					<span className="header item">
-						Jobson
+						{Constants.CLI_NAME}
 					</span>
-
-                    <NavLink to="/jobs" className="item" activeClassName="active">
-                        Jobs
-                    </NavLink>
                     <NavLink to="/submit" className="item" activeClassName="active">
                         Submit Job
                     </NavLink>
 
-                    <div className="right menu">
-                        <em className="item">
-                            {this.tryRenderUser()}
-                        </em>
-                    </div>
                 </div>
             </div>
         );

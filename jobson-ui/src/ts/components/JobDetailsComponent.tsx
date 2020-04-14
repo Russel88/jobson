@@ -75,7 +75,7 @@ export class JobDetailsComponent extends Component<JobDetailsComponentProps, Job
             isLoadingJob: true,
             loadingError: null,
             job: null,
-            selectedTabIdx: 2,
+            selectedTabIdx: 1,
             jobChangesSubject: null,
             updateSubscriptionError: false,
         };
@@ -155,11 +155,11 @@ export class JobDetailsComponent extends Component<JobDetailsComponentProps, Job
                 <div className="ui grid">
                     <div className="twelve wide column">
                         <div className="ui breadcrumb">
-                            <Link to="/jobs" className="section">
-                                jobs
-                            </Link>
-                            <div className="divider">
-                                /
+                            <span>
+				Job ID
+			    </span>
+			 <div className="divider">
+                               	:
                             </div>
                             <div className="active section">
                                 <h1>
@@ -229,8 +229,6 @@ export class JobDetailsComponent extends Component<JobDetailsComponentProps, Job
 
                 {Helpers.renderJobActionsWithoutViewBtn(this.props.api, this.props.routeProps, this.state.job.id, this.state.job._links)}
 
-                <ResubmitButtonComponent api={this.props.api} jobId={this.state.job.id} routeProps={this.props.routeProps} />
-
                 <div className="ui top tabular menu">
                     {this.renderTabHeaders()}
                 </div>
@@ -244,8 +242,6 @@ export class JobDetailsComponent extends Component<JobDetailsComponentProps, Job
 
     private get detailHeaders(): { [k: string]: () => ReactElement<any> | string } {
         return {
-            "Job Name": () => this.state.job.name,
-            "Created by": () => this.state.job.owner,
             "Submitted": () => {
                 return <TimeAgo date={this.state.job.timestamps[0].time} />;
             },
@@ -325,19 +321,6 @@ export class JobDetailsComponent extends Component<JobDetailsComponentProps, Job
 
     private tabsForRestLinks(restLinks: { [name: string]: APIRestLink }): JobDetailsTab[] {
         const ret = [];
-
-        if (restLinks["spec"] !== undefined) {
-            ret.push({
-                header: "Spec",
-                renderer: () => {
-                    return (
-                        <SpecViewerComponent api={this.props.api}
-                                             specUrl={this.props.api.restHrefToUrl(restLinks["spec"].href)}
-                                             jobId={this.props.params.id}/>
-                    );
-                }
-            });
-        }
 
         if (restLinks["inputs"] !== undefined) {
             ret.push({

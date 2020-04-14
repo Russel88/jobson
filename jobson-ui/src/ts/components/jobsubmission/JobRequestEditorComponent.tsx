@@ -80,8 +80,7 @@ export class JobRequestEditorComponent extends Component<JobRequestEditorCompone
 	public render(): ReactElement<any> {
 		return (
 			<div className="ui form">
-				<h2>Edit Job</h2>
-				{this.renderSystemWideExpectedInputs()}
+				<h2>Input:</h2>
 				{this.renderJobSpecExpectedInputs()}
 			</div>
 		);

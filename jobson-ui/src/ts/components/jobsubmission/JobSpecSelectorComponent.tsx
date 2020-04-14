@@ -42,7 +42,7 @@ export class JobSpecSelectorComponent extends Component<JobSpecSelectorComponent
             <div className="ui form">
                 <div className="field">
                     <label htmlFor="job-spec">
-                        Job Spec
+                        Choose analysis:
                     </label>
                     <select id="job-spec"
                             className="ui fluid dropdown"

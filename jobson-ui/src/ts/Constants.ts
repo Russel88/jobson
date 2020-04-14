@@ -27,6 +27,8 @@ export class Constants {
     public static readonly F64_MIN = -Number.MIN_VALUE;  // This is actually higher than IEEE 754 doubles, but it's a hard javascript limit
     public static readonly F64_MAX = Number.MAX_VALUE;  // This is actually lower than IEEE 754 doubles, but it's a hard javascript limit
 
-    public static readonly STR_ARRAY_INTERACTIVE_BREAKPOINT = 500;
+    public static readonly STR_ARRAY_INTERACTIVE_BREAKPOINT = 10000;
     public static readonly DEFAULT_JOB_NAME = "default";
+
+    public static readonly CLI_NAME = "Jobson";
 }

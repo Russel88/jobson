@@ -201,9 +201,7 @@ export class AppComponent extends Component<AppComponentProps, AppComponentState
                            render={props => <SubmitJobComponent api={this.state.api} routeProps={props}/>}/>
                     <Route path="/jobs/:id"
                            render={props => <JobDetailsComponent params={props.match.params} api={this.state.api} routeProps={props}/>}/>
-                    <Route path="/jobs"
-                           render={props => <JobListComponent api={this.state.api} routeProps={props}/>}/>
-                    <Redirect from={"/"} to={"/jobs"}/>
+                    <Redirect from={"/"} to={"/submit"}/>
                 </Switch>
             </main>
         );
