@@ -31,4 +31,5 @@ export class Constants {
     public static readonly DEFAULT_JOB_NAME = "default";
 
     public static readonly CLI_NAME = "Jobson";
+    public static readonly HELP_LINK = "https://github.com/adamkewley/jobson";
 }

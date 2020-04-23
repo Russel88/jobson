@@ -26,6 +26,7 @@ import {APIJobEvent} from "../../apitypes/APIJobEvent";
 import {JobsonAPI} from "../../JobsonAPI";
 import {APIErrorMessage} from "../../apitypes/APIErrorMessage";
 import {APIJobOutput} from "../../apitypes/APIJobOutput";
+import {Constants} from "../../Constants";
 
 export interface JobOutputsViewerProps {
     jobChangesSubject: Observable<APIJobEvent>;
@@ -174,6 +175,7 @@ export class JobOutputsViewer extends Component<JobOutputsViewerProps, JobOutput
     private renderOutputsUi(): ReactElement<any> {
         return (
             <div>
+		<a href={Constants.HELP_LINK}>Detailed description of the output can be found here</a>
                 {this.renderFileOutputs()}
                 {JobOutputsViewer.renderStdioOutput(
                     "stdout",
