@@ -20,6 +20,7 @@
 import * as React from "react";
 import {Component, FormEvent, ReactElement} from "react";
 import {APIJobSpecSummary} from "../../apitypes/APIJobSpecSummary";
+import {Constants} from "../../Constants";
 
 export interface JobSpecSelectorComponentProps {
     selectedSpecId: string,
@@ -41,6 +42,16 @@ export class JobSpecSelectorComponent extends Component<JobSpecSelectorComponent
         return (
             <div className="ui form">
                 <div className="field">
+	    	    	<p>
+		    	<header>
+			<h1>
+			Web interface for {Constants.CLI_NAME}
+			</h1>
+			</header>
+		    	<a href={Constants.CLI_LINK}>
+			{Constants.CLI_NAME} is also available as a standalone program
+		    	</a>
+			</p>
                     <label htmlFor="job-spec">
                         Choose analysis:
                     </label>

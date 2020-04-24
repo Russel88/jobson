@@ -143,7 +143,6 @@
         <module>jobson-docs</module>
 
         <!-- Packacking -->
-	<module>jobson-deb</module>
 	<module>jobson-nix</module>
 
     </modules>

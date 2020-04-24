@@ -32,4 +32,5 @@ export class Constants {
 
     public static readonly CLI_NAME = "Jobson";
     public static readonly HELP_LINK = "https://github.com/adamkewley/jobson";
+    public static readonly CLI_LINK = "https://github.com/adamkewley/jobson";
 }
