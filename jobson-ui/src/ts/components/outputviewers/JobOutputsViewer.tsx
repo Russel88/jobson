@@ -178,12 +178,12 @@ export class JobOutputsViewer extends Component<JobOutputsViewerProps, JobOutput
 		<a href={Constants.HELP_LINK}>Detailed description of the output can be found here</a>
                 {this.renderFileOutputs()}
                 {JobOutputsViewer.renderStdioOutput(
-                    "stdout",
+                    "Command line output",
                     this.props.api.urlToGetJobStdout(this.props.jobId),
                     () => this.props.api.fetchJobStdout(this.props.jobId),
                     () => this.props.api.onJobStdoutUpdate(this.props.jobId))}
                 {JobOutputsViewer.renderStdioOutput(
-                    "stderr",
+                    "Command line errors",
                     this.props.api.urlToGetJobStderr(this.props.jobId),
                     () => this.props.api.fetchJobStderr(this.props.jobId),
                     () => this.props.api.onJobStderrUpdate(this.props.jobId))}
@@ -200,7 +200,7 @@ export class JobOutputsViewer extends Component<JobOutputsViewerProps, JobOutput
     private renderFileOutput(jobOutput: APIJobOutput): ReactElement<any> {
         const viewer =
             (jobOutput.metadata && jobOutput.metadata.embed) ?
-                <embed className="ui image" src={this.props.api.buildAPIPathTo(jobOutput.href)}/> :
+		<embed src={this.props.api.buildAPIPathTo(jobOutput.href)} width="100%"/> :
                 null;
 
         return JobOutputsViewer.renderJobOutput({
