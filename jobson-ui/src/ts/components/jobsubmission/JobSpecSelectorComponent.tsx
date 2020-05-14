@@ -51,8 +51,14 @@ export class JobSpecSelectorComponent extends Component<JobSpecSelectorComponent
 		    	<a href={Constants.CLI_LINK}>
 			{Constants.CLI_NAME} is also available as a standalone program
 		    	</a>
+			<h5>
+			<a href={Constants.CLI_LINK+"/issues"}>
+			Submit feature requests and bug reports here
+			</a>
+			</h5>
+			<hr />
 			</p>
-                    <label htmlFor="job-spec">
+		    <label htmlFor="job-spec">
                         Choose analysis:
                     </label>
                     <select id="job-spec"
@@ -67,6 +73,7 @@ export class JobSpecSelectorComponent extends Component<JobSpecSelectorComponent
                 <div className="ui info message">
                     {this.selectedSpec.description}
                 </div>
+		<hr />
             </div>
         );
     }
