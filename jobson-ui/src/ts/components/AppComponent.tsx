@@ -203,7 +203,7 @@ export class AppComponent extends Component<AppComponentProps, AppComponentState
                     <Route path="/jobs/:id"
                            render={props => <JobDetailsComponent params={props.match.params} api={this.state.api} routeProps={props}/>}/>
                     <Route path="/news"
-                           render={props => <NewsComponent api={this.state.api} routeProps={props}/>}/>
+                           render={props => <NewsComponent routeProps={props}/>}/>
                     <Redirect from={"/"} to={"/submit"}/>
                 </Switch>
             </main>
