@@ -21,6 +21,7 @@ import * as React from 'react';
 import {HttpService} from "../HttpService";
 import {JobsonAPI} from "../JobsonAPI";
 import {JobListComponent} from "./JobListComponent";
+import {NewsComponent} from "./NewsComponent";
 import {JobDetailsComponent} from "./JobDetailsComponent";
 import {Redirect, Route, Switch} from "react-router";
 import {NavbarComponent} from "./NavbarComponent";
@@ -201,6 +202,8 @@ export class AppComponent extends Component<AppComponentProps, AppComponentState
                            render={props => <SubmitJobComponent api={this.state.api} routeProps={props}/>}/>
                     <Route path="/jobs/:id"
                            render={props => <JobDetailsComponent params={props.match.params} api={this.state.api} routeProps={props}/>}/>
+                    <Route path="/news"
+                           render={props => <NewsComponent api={this.state.api} routeProps={props}/>}/>
                     <Redirect from={"/"} to={"/submit"}/>
                 </Switch>
             </main>

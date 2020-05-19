@@ -117,6 +117,9 @@ export class NavbarComponent extends React.Component<NavbarComponentProps, Navba
                     <NavLink to="/submit" className="item" activeClassName="active">
                         Submit Job
                     </NavLink>
+                    <NavLink to="/news" className="item" activeClassName="active">
+                        News
+                    </NavLink>
 
                 </div>
             </div>
