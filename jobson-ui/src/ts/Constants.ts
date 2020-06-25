@@ -33,5 +33,6 @@ export class Constants {
     public static readonly CLI_NAME = "CRISPRCasTyper";
     public static readonly HELP_LINK = "https://github.com/Russel88/CRISPRCasTyper#cctyperout";
     public static readonly CLI_LINK = "https://github.com/Russel88/CRISPRCasTyper";
-    public static readonly NEWS_LINK = "http://mibi.galaxy.bio.ku.dk/russel/cctyper/news.html";
+    public static readonly NEWS_LINK = "news.html";
+    public static readonly TYPING_LINK = "typing.html";
 }
