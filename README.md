@@ -4,6 +4,8 @@
 
 A platform for transforming command-line applications into a job service.
 
+This fork was made for CRISPRCasTyper, which is deployed at [typer.crispr.dk](https://typer.crispr.dk). There are only made changes in the UI, and mainly simplyfications, such as removal of access to job list, addition of panels specific for CRISPRCasTyper, and some links to further information, hardcoded in Constants.tsx.
+
 ![ui video demo](jobson-docs/src/ui-animation.gif)
 
 
